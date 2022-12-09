@@ -1,0 +1,6 @@
+*.css linguist-vendored
+*.scss linguist-vendored
+*.js linguist-vendored
+CHANGELOG.md export-ignore
+*.txt text eol=lf
+bin\*.sh text eol=lf

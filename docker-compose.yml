@@ -1,0 +1,84 @@
+version: '3'
+services:
+
+  #PHP Service
+  mot-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php74-mot
+    container_name: mot-backend
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: mot-backend
+      SERVICE_TAGS: dev
+      APP_PATH: /var/www/mot
+      DB_HOST: mot-backend-db
+      DB_NAME: mot
+      TEST_DB_NAME: mottest
+      TEST_DB_HOST: mot-test-db
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - mot-backend-network
+
+  #Nginx Service
+  mot-webserver:
+    image: nginx:alpine
+    container_name: mot-backend-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "9090:80"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - mot-backend-network
+
+  #MySQL Service
+  mot-backend-db:
+    image: mysql:5.7.22
+    container_name: mot-backend-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: mot
+      MYSQL_ROOT_PASSWORD: squarehouse
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - mot-backend-network
+  mot-test-db:
+    image: mysql:5.7.22
+    container_name: mot-test-db
+    restart: always
+    tty: true
+    environment:
+      MYSQL_DATABASE: mottest
+      MYSQL_ROOT_PASSWORD: squarehouse
+      SERVICE_TAGS: test
+      SERVICE_NAME: mysql
+    volumes:
+      - "./.data/test-db:/var/lib/mysql"
+    networks:
+      - mot-backend-network
+    ports:
+      - '3304:3306'
+
+
+#Docker Networks
+networks:
+  mot-backend-network:
+    driver: bridge
+#Volumes
+volumes:
+  mot-backend-dbdata:
+    driver: local

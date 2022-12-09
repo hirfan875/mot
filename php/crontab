@@ -1,0 +1,22 @@
+*/5 * * * * cd ~/public_html/staging/mot; php artisan schedule:run >> ~/public_html/staging/mot/storage/log/cron.log 2>&1
+
+#################################
+# separated queue processing
+###################################
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=default --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/default-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=item-recieved-as-expected --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/item-recieved-as-expected.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=order-placed-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/order-placed-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=order-status-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/order-status-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=seller-approval-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/seller-approval-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=seller-verify-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/seller-verify-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=update-keyword-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/update-keyword-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=update-price-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/update-price-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=create-iyzico-submerchant-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/create-iyzico-submerchant-queue.log 2>&1
+
+#################################
+# Probably decommissioned .. check with Irfan
+###################################
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=create-submerchant-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/create-submerchant-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=refund-order-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/refund-order-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=cancel-order-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/cancel-order-queue.log 2>&1
+* * * * * cd ~/public_html/staging/mot; php artisan queue:work --queue=resize-image-queue --sleep=3 --timeout=10 --backoff=10 --max-time=60 >> ~/public_html/staging/mot/storage/logs/resize-image-queue-queue.log 2>&1

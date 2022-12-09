@@ -1,0 +1,2 @@
+@props(['url', 'title'])
+<a href="{{ $url }}" class="btn btn-outline-danger btn-sm mb-1" onclick="return window.confirm('{{ __('Are you sure you want to delete :title', ['title' => addslashes($title).'?']) }}');"><i class="fa fa-trash"></i></a>

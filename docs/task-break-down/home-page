@@ -1,0 +1,72 @@
+Home Page :
+1. Categories :
+	1.1. Display List of Categories
+	1.2. Display List of Nested Categories
+	1.3. Click on any category takes you Product list in that Category.
+	1.4  Click on View All extends the list to show All categories in the same pane [Not functional on static design]
+2.  Slider
+	2.1 Get the list of slider images
+	2.2 [Corresponding Admin Task]
+	2.3 [Corresponding Mobile Task]
+
+3.  Header :
+    3.1 Extract As template.
+	3.2 Connect Search to search API.
+	3.3 Link Sell Your Products
+	3.4 Link Cart
+	3.5 Show Cart Count
+	3.6 Show Wishlist Count
+	3.7 Link Wishlist
+
+4.  Filter Promotional Links [Flash Deals, Daily Deals, New Arrivals, Inspection Goods, Just For You, Made In Turkey]
+	4.1. Get Links from APIS
+	4.2. [Corresponding Task for Admin ]
+	4.3. [Corresponding Task for Mobile ]
+
+5.  Promotional Banner [check what these are called in SRS]
+	5.1  Get promotions [Sun Glass / Women Shoes / Sell Your Product]
+	5.2. [Corresponding Task for Admin ]
+	5.3. [Corresponding Task for Mobile ]
+
+
+6. Todays' Deals [Timed Deals]
+	6.1 Get Today's Deals from API
+	6.2. [Corresponding Task for Admin ]
+	6.3. [Corresponding Task for Mobile ]
+
+7. Tabbed Product List | Trending Products
+    [Find How we find out what is trending]
+	7.1 Get Trending Products from API
+	7.2 Filter Trending Products by [TV Computers Tablets Smart Watches Accessories]
+	7.3 [Find how the category filter above is determined , For example , why we dont have Clothing , Women Accessories above]
+
+8.  Promotional Banner [check what these are called in SRS]
+	8.1  Get promotions [Travel / Kids Wear / Sport Wear]
+
+9. Tabbed Product List | Fashion Products
+	9.1 Get All Products From API.
+	9.2 Filter Fashion Products by [Waller Belt Perfume DEODORANT CAPS ]
+	9.3 [Find how the category filter above is determined . What makes a Product to be a fashion product]
+
+
+10. Wide Banner | Special Promo
+
+
+11. Tabbed Product List | Cosmetics Products
+	11.1 Get All Products From API.
+	11.2 Filter Cosmetics Products by [Waller Belt Perfume DEODORANT CAPS ]
+	11.3 [Find how the category filter above is determined . What makes a Product to be a Cosmetics product]
+
+12. Promotional Banner [check what these are called in SRS]
+	12.1  Get promotions [Travel / Kids Wear / Sport Wear]
+
+13. Non Tabbed Products List| Books [Same As Trending Products]
+
+14. Wide Banner | Watches Sale banner
+
+15. Tabbed Product List | Mother & Baby
+
+16. Footer
+    16.1 Newsletter
+	16.2 Links
+	16.3 Top Brands

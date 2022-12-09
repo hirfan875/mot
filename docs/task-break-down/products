@@ -1,0 +1,33 @@
+The Header seems incorrect.
+1. Sell your products, cart and wishlist icon appear on next line, leaving space behind.
+2. What Does All Categories drop down do next to Logo ? Its already there in search box.
+3. There is no bread crumb .. is that delibrate ?
+4. What do "Home / Library / Data" mean under Your car ?
+
+Products List Task:
+
+1. Product List Banner.
+    1.1 Get List Banner from API
+	1.2 [Corresponding Admin Task]
+	1.3 [Corresponding Mobile Task]
+
+2. Product List Header
+    2.1 Sort BY
+    2.2 Show 20/30
+    2.3 List vs Tile view
+
+2. Products Tile
+    2.1 Get Product List
+    2.1 Show Each Tile
+        2.1.1 Image / Name / Price / Currency / Top / Sale / New
+        2.1.2 Hover Store Name / Buy / Favorite / Share  / Name / Currency / Price
+
+3. Products Pagination
+
+4. Filter :
+    1. Categories .. single select items.
+            [The number next to category ... Is that total items in that category?]
+    2. Price ... Is that a fixed range ... or dynamic Range ... if dynamic, how does that dynamic range change?
+    3. Price currency ... Forex involve
+    4. Size probably should be check box
+

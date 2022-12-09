@@ -1,0 +1,33 @@
+<?php
+
+return [
+
+	'all_categories'		=>	'All Categories',
+	'home'					=>	'Home',
+	'categories'			=>	'Categories',
+	'products'				=>	'Products',
+	'wishlist'				=>	'Wishlist',
+	'my_account'			=>	'My Account',
+	'edit_account'			=>	'Edit Account',
+	'change_password'		=>	'Change Password',
+	'address_book'			=>	'Address Book',
+	'my_cancellation'		=>	'My Cancellation',
+	'order_history'			=>	'Order History',
+	'your_cart'				=>	'Your Cart',
+	'contact_us'			=>	'Contact Us',
+	'login_register'		=>	'Login - Register',
+	'forgot_password'		=>	'Forgot Password',
+	'sell_with_us'			=> 	'SELL WITH US',
+	'sell'					=>	'Sell',
+	'thanks'				=>	'Thanks',
+	'compare_product'		=>	'Compare Product',
+	'seller'				=>	'Seller',
+	'store_information'		=>	'Store Information',
+	'order_detail'			=>	'Order Detail',
+	'order_cancel_request'	=>	'Order Cancel Request',
+	'order_tracking'		=>	'Order Tracking',
+	'order_return_request'	=>	'Order Return Request',
+	'product_detail'		=>	'Product Detail',
+	'daily_deals'			=>	'Daily Deals',
+    'flash_deals'			=>	'Flash Deals',
+];

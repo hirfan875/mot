@@ -1,0 +1,1 @@
+<button type="submit" class="btn btn-success" data-original="{{ __('Publish') }}" id="SaveBtn">{{ __('Publish') }}</button>
